@@ -8,7 +8,7 @@ public class CommandHandler implements CommandExecutor{
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label,
 			String[] args) {
-			//Adding stuff later.
+			//Adding stuff later. CHANGED
 		return true;
 	}
 
