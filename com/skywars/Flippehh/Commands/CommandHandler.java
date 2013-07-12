@@ -1,4 +1,4 @@
-package com.skywars.Flippehh;
+package com.skywars.Flippehh.Commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,7 +8,7 @@ public class CommandHandler implements CommandExecutor{
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label,
 			String[] args) {
-			//Adding stuff later. CHANGED
+			//Adding stuff later.
 		return true;
 	}
 
