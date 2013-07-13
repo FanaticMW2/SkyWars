@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.skywars.Flippehh.Commands.CommandHandler;
 import com.skywars.Flippehh.Utilities.EventListener;
 import com.skywars.Flippehh.Utilities.Methods;
 
@@ -31,7 +32,8 @@ public class Main extends JavaPlugin implements Listener {
 		loadConfigurationFile(getConfig());
 		PluginManager pm = this.getServer().getPluginManager();
 		pm.registerEvents(new EventListener(), this);
-		//Just for quick copying later :] getCommand("foobar").setExecutor(new CommandHandler());
+		getCommand("leave").setExecutor(new CommandHandler());
+		getCommand("g").setExecutor(new CommandHandler());
 	}
 
 	private void loadConfigurationFile(FileConfiguration config) {

@@ -1,3 +1,8 @@
 name: SkyWars
 main: com.skywars.Flippehh.Main.Main
 version: 0.1
+commands:
+   leave:
+      description: Removes you from the game.
+   g:
+      description: For Lazy bev.
