@@ -18,9 +18,9 @@ public class CommandHandler implements CommandExecutor {
 				34, -1898.5);
 		if (cmd.getName().equalsIgnoreCase("leave")) {
 			Player player = (Player) sender;
-			if (EventListener.playerNotInSpawn.contains(player.getName())) {
+			if (!(EventListener.inLobby.contains(player.getName()))) {
 				player.teleport(SPAWN_LOC);
-				EventListener.playerNotInSpawn.remove(player.getName());
+				EventListener.inLobby.add(player.getName());
 			} else {
 				player.sendMessage("You are currently not in a game.");
 			}

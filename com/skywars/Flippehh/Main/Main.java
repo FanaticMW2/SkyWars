@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements Listener {
 		saveConfig();
 		loadConfigurationFile(getConfig());
 		PluginManager pm = this.getServer().getPluginManager();
-		pm.registerEvents(new EventListener(), this);
+		pm.registerEvents(new EventListener(this), this);
 		getCommand("leave").setExecutor(new CommandHandler());
 		getCommand("g").setExecutor(new CommandHandler());
 	}
@@ -55,6 +55,18 @@ public class Main extends JavaPlugin implements Listener {
 	}
 
 	public void onDisable(){
-		getServer().getLogger().info("SkyWars is enabled.");
+		getServer().getLogger().info("SkyWars is disabled.");
+		clear();
+	}
+	
+	void clear(){
+		EventListener.inLobby.clear();
+		EventListener.tenpersonffa.clear();
+		EventListener.fourTeamsof4.clear();
+		EventListener.twoTeamsof8.clear();
+		EventListener.nonDonor.clear();
+		EventListener.donor.clear();
+		EventListener.highDonor.clear();
+		EventListener.highestDonor.clear();
 	}
 }
